@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@font-face {
+  font-family: "Switzer-Regular";
+  src: url("../../public/fonts/Switzer-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  padding: 0 2rem;
+}
+.h-screen-hero-home-custom {
+  height: calc(100vh - 5rem);
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 0;
+  }
+  .h-screen-hero-home-custom {
+    height: calc(100vh - 5rem);
+  }
+}
+@media (min-width: 1540px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.swiper-test .swiper-button-next:after,
+.swiper-rtl {
+  content: "" !important;
+  background-image: url("../../public/assets/icon-swiper-r.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 12px;
+}
+
+.swiper-test .swiper-button-prev:after,
+.swiper-rtl {
+  content: "" !important;
+  background-image: url("../../public/assets/icon-swiper-l.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 12px;
+}
+
+.swiper-test .swiper-button-prev,
+.swiper-test .swiper-button-next {
+  top: var(--swiper-navigation-top-offset, 96%) !important;
+}
+
+.swiper-test .swiper-button-prev {
+  right: 200px !important;
+  left: auto !important;
+}
+
+.swiper-test .swiper-button-next {
+  right: 160px !important;
+  left: auto !important;
+}
+
+.swiper-test .swiper-pagination-fraction {
+  top: auto !important;
+  bottom: 0.5rem !important;
+  width: 10%;
+  left: 35px;
+}
+
+@media (min-width: 1024px) {
+  .swiper-test .swiper-button-next:after,
+  .swiper-rtl {
+    padding: 15px;
+  }
+
+  .swiper-test .swiper-button-prev:after,
+  .swiper-rtl {
+    padding: 15px;
+  }
+  .swiper-test .swiper-button-prev,
+  .swiper-test .swiper-button-next {
+    top: var(--swiper-navigation-top-offset, 86%) !important;
+  }
+
+  .swiper-test .swiper-pagination-fraction {
+    bottom: 5rem !important;
+    width: 4%;
+    left: auto;
+    right: 250px;
+  }
+}
+
+.swiper-clients .swiper-button-prev {
+  left: 0px !important;
+}
+
+.swiper-clients .swiper-button-next {
+  right: 0px !important;
+}
+
+.swiper-clients .swiper-button-prev:after,
+.swiper-clients .swiper-button-next:after {
+  font-size: 20px !important;
+  color: #0d0e13;
+}
